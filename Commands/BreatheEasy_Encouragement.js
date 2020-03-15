@@ -1,0 +1,19 @@
+//Sends a random quote of encouragement
+
+module.exports = async function(tag, guild, channel) {
+  const time = new Date();
+  try { //Sends a random nice message to help encourage people
+    const discord = require('discord.js');
+    const emotes = ['<:Neko_Admire:669875350062366750>', '<:Neko_Hai:669875350028681216>', '<:Neko_Lick:669875350515482637>', '<:Neko_Sip:669875350293053440>', '<a:Neko_Rubby:669875351480041472>'];
+    const encourage = [`Be gentle with yourself. You’re doing the best you can and nobody can ask anything more of you `, `There isn't a single doubt in my mind everything you need to achieve your goals is a trait you already possess `, `I'm so incredibly proud of you! You deserve to be told that more often, I guess that's why I'm here `, `I know you have anxieties and concerns but always remember that when times are their darkest our true character shines above all else and I truly believe you're a good person, The way you choose to tackle the challenges ahead of you will prove me right. You are a good person `, `You're not going to achieve all your goals and beat all your demons in a day and you don't have to, Just relax, Make sure you're okay today and you'll be alright `, `Going slow is okay, It doesn't matter how slow you go as long as you don't stop. Take your time and don't rush yourself `, `Whenever you find yourself doubting how far you can go, just remember how far you have come. Remember everything you have faced, all the battles you have won, and all the fears you have overcome `, `I see something in you that the world needs, The world needs you here `, `In case you forgot to remind yourself this morning: Your butt is perfect. Your smile lights up the room. Your mind is insanely cool. You are way more than enough and you're doing an amazing job at life `, `No matter what happens in the future I am always going to be here and people who care will always be here `, `Sometimes the strongest will and the purest ambitions come from a dark place, you **will** make it through this `, `Focus on winning small battles, a little progress every day adds up to something great `, `I know you're stronger than you believe you are, More capable than you give yourself credit for and more loved than you tell yourself `, `It's okay to breakdown and scream and cry as long as you never give up and pick yourself back up again to keep fighting `, `It may seem impossible now but you'll realise it wasn't when you're done `, `Soon, when all is well, you’re going to look back on this period of your life and be so glad that you never gave up `, `You may think your worries are an impassible mountain but I **know** you can do it and after you do you\ll have shown others it can be done `, `Look for something positive in each day even if some days you have to look a little harder `, `Don't be so hard on yourself! You're a work in progress, which means you'll get there a little at a time, not all at once `, `Take a deep breath, it’s just a bad day not a bad life. Tomorrow will be better `, `Strong people don't have it easy, You become a strong person when you've fought through adversity. You are a strong person `];
+
+    channel.send(encourage[Math.floor(Math.random() * encourage.length)]);
+    channel.send(emotes[Math.floor(Math.random() * emotes.length)]);
+    console.log('\x1b[32m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Encouragement command success\n`);
+    return;
+  } catch {
+    channel.send('*Breathe Easy stutters and can\'t seem to find the right words*\nThis command may have failed but that doesn\'t mean you\'re free from my unrelenting support! I LOVE YOU <3');
+    console.log('\x1b[31m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Encouragement command fail\n`);
+    return;
+  }
+}
