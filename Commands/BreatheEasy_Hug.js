@@ -7,7 +7,7 @@ module.exports = async function(mention, tag, guild, username, channel, breatheI
       const discord = require('discord.js'),
         hugs = ['./Misc/Hugs/HugAdventureTime.gif', './Misc/Hugs/HugCat.gif', './Misc/Hugs/HugMicheal.gif', './Misc/Hugs/HugPokemon.gif', './Misc/Hugs/HugStitch.gif', './Misc/Hugs/HugBatman.gif', './Misc/Hugs/HugFriends.gif', './Misc/Hugs/HugRedPanda.gif', './Misc/Hugs/HugGravityFalls.gif', './Misc/Hugs/HugSupernatural.gif', './Misc/Hugs/HugRacon.gif', './Misc/Hugs/HugKoala.gif', './Misc/Hugs/HugKoalaSmol.gif'];
 
-      channel.send(`${username} has hugged ${mention}`, {
+      channel.send(`${username} has hugged ${mention.displayName}`, {
         files: [hugs[Math.floor(Math.random() * hugs.length)]]
       });
       console.log('\x1b[32m%s\x1b[0m', `${time}:\n${guild}:\n${tag} & ${mention} Hug command success\n`);
