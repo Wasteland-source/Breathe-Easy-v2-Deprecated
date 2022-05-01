@@ -4,7 +4,7 @@ module.exports = async function(setting, tag, guild, channel) {
   const time = new Date();
   try {
     const discord = require('discord.js'),
-      prompt = new discord.RichEmbed();
+      prompt = new discord.MessageEmbed();
       //initialises a new block
 
       let randomNumber;
@@ -27,7 +27,7 @@ module.exports = async function(setting, tag, guild, channel) {
         console.log('\x1b[32m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Prompt command success ${setting}\n`);
         break;
       default:
-        const promptHelpBlock = new discord.RichEmbed();
+        const promptHelpBlock = new discord.MessageEmbed();
 
         promptHelpBlock.addField('Keyword', '\n\n/prompt campfire\n\n/prompt rain\n\n/prompt snow\n\n/prompt random', true);
         promptHelpBlock.addField('Description', '\n\nSends a random prompt from the campfire group\n\nSends a random prompt from the rain group\n\nSends a random prompt from the snow group\n\nSends a random prompt from any group', true);

@@ -35,7 +35,7 @@ module.exports = function(adCommand, botBE, token, tag, guild, guildCount, guild
         console.log('\x1b[35m%s\x1b[0m', `${time}:\n${guild}:\n${tag} Repeat success\n`);
         break;
       default: //Sends a block with all the admin keywords
-        const adCommandBlock = new discord.RichEmbed();
+        const adCommandBlock = new discord.MessageEmbed();
 
         adCommandBlock.setFooter('Breathe Easy');
         adCommandBlock.addField('Command', '\n\nReload\n\nGuildcount\n\nGuildlist\n\nGuildIDs\n\nGuildfill\n\nUsercount\n\nRepeat', true);

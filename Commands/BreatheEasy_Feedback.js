@@ -5,7 +5,7 @@ module.exports = async function(feedback, tag, guild, channelFrom, channelTo) {
   try {
     if (feedback) {
       const discord = require('discord.js'),
-        feedbackBlock = new discord.RichEmbed();
+        feedbackBlock = new discord.MessageEmbed();
 
       feedbackBlock.setTitle(`Feedback from ${tag}`);
       feedbackBlock.setThumbnail(`https://i.imgur.com/HkRBcAV.png`);

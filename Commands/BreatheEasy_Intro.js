@@ -5,7 +5,7 @@ module.exports = async function(tag, guild, channel) {
   try { //Sends a simple block with a welcome message
     const discord = require('discord.js');
 
-    const introBlock = new discord.RichEmbed();
+    const introBlock = new discord.MessageEmbed();
 
     introBlock.setTitle('Here to help!');
     introBlock.setDescription(`Hello!\n\nI'm Breathe Easy, A bot all about relaxation, happiness and mental health. I will attempt to make sure the members of ${guild} are happier and healthier than they were prior to Breathe Easy being one of the available bots in ${guild}. If there is anything at all you think could be added or changed to improve your experience with Breathe Easy please use the feedback command and let me know.`);

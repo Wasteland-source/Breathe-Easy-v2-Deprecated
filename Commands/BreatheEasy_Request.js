@@ -5,7 +5,7 @@ module.exports = async function(request, tag, guild, channelFrom, channelTo) {
   try {
     if (request) {
       const discord = require('discord.js'),
-        requestBlock = new discord.RichEmbed();
+        requestBlock = new discord.MessageEmbed();
 
       requestBlock.setTitle(`Request from ${tag}`);
       requestBlock.setThumbnail(`https://i.imgur.com/HkRBcAV.png`);
