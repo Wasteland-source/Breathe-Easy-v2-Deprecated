@@ -8,7 +8,7 @@ module.exports = function(title, author, image, subreddit) {
   }
   try {
     const discord = require('discord.js'),
-      block = new discord.RichEmbed(),
+      block = new discord.MessageEmbed(),
       time = new Date();
     //Importing discord.js and initialising a new block
 
